@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.RMovieMoviestyleMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.RMovieMoviestyle">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="movie_id" jdbcType="INTEGER" property="movieId" />
+    <id column="movie_style_id" jdbcType="INTEGER" property="movieStyleId" />
+  </resultMap>
+</mapper>

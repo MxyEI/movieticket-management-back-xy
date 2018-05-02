@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.CinemahallMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.Cinemahall">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="cinema_hall_id" jdbcType="INTEGER" property="cinemaHallId" />
+    <result column="cinema_id" jdbcType="INTEGER" property="cinemaId" />
+    <result column="hall_name" jdbcType="VARCHAR" property="hallName" />
+    <result column="seat_layout" jdbcType="VARCHAR" property="seatLayout" />
+  </resultMap>
+</mapper>

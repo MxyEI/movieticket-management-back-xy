@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.SeatMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.Seat">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="seat_id" jdbcType="INTEGER" property="seatId" />
+    <result column="ticket_id" jdbcType="INTEGER" property="ticketId" />
+    <result column="movie_on_show_id" jdbcType="INTEGER" property="movieOnShowId" />
+    <result column="row" jdbcType="INTEGER" property="row" />
+    <result column="col" jdbcType="INTEGER" property="col" />
+    <result column="available" jdbcType="BIT" property="available" />
+  </resultMap>
+</mapper>

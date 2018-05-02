@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.MovieMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.Movie">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="movie_id" jdbcType="INTEGER" property="movieId" />
+    <result column="movie_type_id" jdbcType="INTEGER" property="movieTypeId" />
+    <result column="country_id" jdbcType="INTEGER" property="countryId" />
+    <result column="movie_status_id" jdbcType="INTEGER" property="movieStatusId" />
+    <result column="pub_date" jdbcType="DATE" property="pubDate" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="rating" jdbcType="DECIMAL" property="rating" />
+    <result column="length" jdbcType="INTEGER" property="length" />
+    <result column="poster_small" jdbcType="VARCHAR" property="posterSmall" />
+    <result column="poster_large" jdbcType="VARCHAR" property="posterLarge" />
+  </resultMap>
+</mapper>
