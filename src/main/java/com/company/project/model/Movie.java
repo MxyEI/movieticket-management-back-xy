@@ -1,5 +1,8 @@
 package com.company.project.model;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.*;
@@ -22,6 +25,7 @@ public class Movie {
      * 首映日期
      */
     @Column(name = "pub_date")
+    @JSONField(format="yyyy-MM-dd")
     private Date pubDate;
 
     /**

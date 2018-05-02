@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/data-analyse-API.iml" filepath="$PROJECT_DIR$/data-analyse-API.iml" />
-      <module fileurl="file://$PROJECT_DIR$/movieticket-.iml" filepath="$PROJECT_DIR$/movieticket-.iml" />
       <module fileurl="file://$PROJECT_DIR$/movieticket-management-back-xy.iml" filepath="$PROJECT_DIR$/movieticket-management-back-xy.iml" />
     </modules>
   </component>
