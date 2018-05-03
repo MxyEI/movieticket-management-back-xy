@@ -1,5 +1,8 @@
 package com.company.project.model;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.*;
@@ -19,12 +22,16 @@ public class Movieonshow {
      * 放映日期
      */
     @Column(name = "show_date")
+    @JSONField(format="yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date showDate;
 
     /**
      * 放映时间
      */
     @Column(name = "show_time")
+    @JSONField(format="hh:mm")
+    @DateTimeFormat(pattern = "hh:mm")
     private Date showTime;
 
     /**
