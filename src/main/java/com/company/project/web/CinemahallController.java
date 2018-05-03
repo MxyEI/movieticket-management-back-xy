@@ -53,4 +53,12 @@ public class CinemahallController {
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
     }
+
+    @PostMapping("/findHallBycId")
+    public Result findHallByCinemaId(@RequestParam Integer cinemaId,@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size){
+        PageHelper.startPage(page, size);
+        List<Cinemahall> list = cinemahallService.selectHallByCinemaId(cinemaId);
+        PageInfo pageInfo = new PageInfo(list);
+        return ResultGenerator.genSuccessResult(pageInfo);
+    }
 }

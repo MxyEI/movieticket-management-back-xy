@@ -10,4 +10,8 @@
     <result column="hall_name" jdbcType="VARCHAR" property="hallName" />
     <result column="seat_layout" jdbcType="VARCHAR" property="seatLayout" />
   </resultMap>
+
+  <select id="selectHallByCinemaId" parameterType="INTEGER" resultMap="BaseResultMap">
+          select * from CinemaHall where cinema_id = #{cinemaId}
+  </select>
 </mapper>
