@@ -24,7 +24,7 @@ public class Seat {
     private Integer col;
 
     /**
-     * 座位是否可用（1代表未售出）
+     * 座位是否可用（0代表已售出）
      */
     private Boolean available;
 
