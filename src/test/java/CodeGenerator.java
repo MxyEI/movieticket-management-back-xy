@@ -37,18 +37,19 @@ public class CodeGenerator {
     private static final String DATE = new SimpleDateFormat("yyyy/MM/dd").format(new Date());//@date
 
     public static void main(String[] args) {
-        genCode("Cinema");
-        genCode("CinemaHall");
-        genCode("Country");
-        genCode("Movie");
-        genCode("MovieOnShow");
-        genCode("MovieStatus");
-        genCode("MovieStyle");
-        genCode("MovieType");
-        genCode("R_Movie_MovieStyle");
-        genCode("Seat");
-        genCode("Ticket");
-        genCode("User");
+//        genCode("Cinema");
+//        genCode("CinemaHall");
+//        genCode("Country");
+//        genCode("Movie");
+//        genCode("MovieOnShow");
+//        genCode("MovieStatus");
+//        genCode("MovieStyle");
+//        genCode("MovieType");
+//        genCode("R_Movie_MovieStyle");
+//        genCode("Seat");
+//        genCode("Ticket");
+//        genCode("User");
+        genCode("Sysuser");
 
         //genCodeByCustomModelName("输入表名","输入自定义Model名称");
  //       genCodeByCustomModelName("cinema","ChartlocationInfo");
