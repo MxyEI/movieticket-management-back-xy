@@ -30,8 +30,8 @@ public class Movieonshow {
      * 放映时间
      */
     @Column(name = "show_time")
-    @JSONField(format="hh:mm")
-    @DateTimeFormat(pattern = "hh:mm")
+    @JSONField(format="HH:mm")
+    @DateTimeFormat(pattern = "HH:mm")
     private Date showTime;
 
     /**
