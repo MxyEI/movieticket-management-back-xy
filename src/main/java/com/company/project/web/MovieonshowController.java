@@ -1,10 +1,13 @@
 package com.company.project.web;
+import com.company.project.DTO.MovieOnShowDTO;
 import com.company.project.core.Result;
 import com.company.project.core.ResultGenerator;
 import com.company.project.model.Movieonshow;
+import com.company.project.service.MovieonshowAstService;
 import com.company.project.service.MovieonshowService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,6 +24,9 @@ import java.util.List;
 public class MovieonshowController {
     @Resource
     private MovieonshowService movieonshowService;
+
+    @Autowired
+    private MovieonshowAstService movieonshowAstService;
 
     @PostMapping("/add")
     public Result add(Movieonshow movieonshow) {
@@ -49,7 +55,7 @@ public class MovieonshowController {
     @PostMapping("/list")
     public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size) {
         PageHelper.startPage(page, size);
-        List<Movieonshow> list = movieonshowService.findAll();
+        List<MovieOnShowDTO> list = movieonshowAstService.selectonshow();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
     }

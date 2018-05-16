@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.MovieonshowAstMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.DTO.MovieOnShowDTO">
+    <association property="movieonshow" javaType="com.company.project.model.Movieonshow">
+      <id column="movieonshowid" property="movieOnShowId" />
+      <result column="showdate" property="showDate" />
+      <result column="showtime" property="showTime" />
+    </association>
+
+    <association property="movie" javaType="com.company.project.model.Movie">
+      <id column="movieid" property="movieId" />
+      <result column="title" property="title" />
+    </association>
+
+    <association property="cinema" javaType="com.company.project.model.Cinema">
+      <id column="cinemaid" property="cinemaId" />
+      <result column="cinemaname" property="cinemaName" />
+    </association>
+
+    <association property="cinemahall" javaType="com.company.project.model.Cinemahall">
+      <id column="cinemahallid" property="cinemaHallId" />
+      <result column="hallname" property="hallName" />
+    </association>
+
+  </resultMap>
+
+  <select id="selectonshow" resultMap="BaseResultMap">
+select ms.movie_on_show_id as movieonshowid,m.movie_id as movieid,m.title as title,ms.show_date as showdate,ms.show_time as showtime,c.cinema_id as cinemaid,c.cinema_name as cinemaname,ch.cinema_hall_id as cinemahallid,ch.hall_name as hallname from MovieOnShow ms
+left join Movie m on m.movie_id=ms.movie_id
+left join CinemaHall ch on ch.cinema_hall_id=ms.cinema_hall_id
+left join Cinema c on c.cinema_id=ch.cinema_id
+order by showdate desc
+  </select>
+
+</mapper>
