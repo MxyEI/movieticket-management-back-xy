@@ -52,6 +52,13 @@ public class MovieonshowController {
         return ResultGenerator.genSuccessResult(movieonshow);
     }
 
+    //查询同一影院同一影厅在同一时间是否存在档期冲突
+    @PostMapping("/selectsameonshow")
+    public Result resultdetail(Movieonshow movieonshow) {
+        List<Movieonshow> mos = movieonshowService.selectsameonshow(movieonshow);
+        return ResultGenerator.genSuccessResult(mos);
+    }
+
     @PostMapping("/list")
     public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size) {
         PageHelper.startPage(page, size);

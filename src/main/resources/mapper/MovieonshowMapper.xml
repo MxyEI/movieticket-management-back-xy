@@ -13,4 +13,15 @@
     <result column="lang" jdbcType="VARCHAR" property="lang" />
     <result column="price" jdbcType="DECIMAL" property="price" />
   </resultMap>
+
+  <select id="selectsameonshow" parameterType="com.company.project.model.Movieonshow" resultMap="BaseResultMap">
+    select * from movieonshow
+    <where>
+      <if test='movieId!=null and movieId !="" '>and movie_id = #{movieId}</if>
+      <if test='cinemaHallId!=null and cinemaHallId !="" '>and cinema_hall_id = #{cinemaHallId}</if>
+      <if test='showDate!=null '>and show_date = #{showDate}</if>
+    </where>
+
+  </select>
+
 </mapper>

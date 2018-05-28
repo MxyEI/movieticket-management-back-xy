@@ -21,4 +21,8 @@ public class MovieonshowServiceImpl extends AbstractService<Movieonshow> impleme
     @Resource
     private MovieonshowMapper movieonshowMapper;
 
+    @Override
+    public List<Movieonshow> selectsameonshow(Movieonshow movieonshow) {
+        return movieonshowMapper.selectsameonshow(movieonshow);
+    }
 }

@@ -10,5 +10,5 @@ import java.util.List;
  * Created by CodeGenerator on 2018/05/02.
  */
 public interface MovieonshowService extends Service<Movieonshow> {
-
+   List<Movieonshow> selectsameonshow(Movieonshow movieonshow);
 }
